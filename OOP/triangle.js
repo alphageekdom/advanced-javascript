@@ -15,4 +15,18 @@ class Triangle {
   getHypotenuse() {
     return Math.sqrt(this.a ** 2 + this.b ** 2);
   }
+
+  describe() {
+    return `I am a triangle with are of ${this.getArea()}`;
+  }
+}
+
+class ShyTriangle extends Triangle {
+  describe() {
+    return '(runs and hides)';
+  }
+
+  beShy() {
+    return 'I AM SHY!';
+  }
 }
