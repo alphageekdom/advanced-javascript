@@ -1,3 +1,9 @@
+function choice(arr) {
+  const randIndex = Math.floor(Math.random() * arr.length);
+
+  return arr[randIndex];
+}
+
 class Cat {
   constructor(name, breed) {
     this.name = name;
@@ -5,9 +11,20 @@ class Cat {
     this.species = 'felis catus';
   }
 
-  static meow() {
-    // return 'MEOW MEOW MEOW!!!!';
-    console.log('THIS IS: ', this);
+  static registerStray() {
+    const names = [
+      'Muffin',
+      'Biscuit',
+      'Sleepy',
+      'Dodo',
+      'Princess Butterface',
+    ];
+    const name = choice(names);
+    return new Cat(name, 'unknown');
+  }
+
+  meow() {
+    return `${this.name} says meow`;
   }
 
   static species = 'felis catus';
