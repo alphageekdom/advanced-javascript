@@ -30,3 +30,17 @@ class ShyTriangle extends Triangle {
     return 'I AM SHY!';
   }
 }
+
+class ColorTriangle extends Triangle {
+  constructor(a, b, color) {
+    super(a, b);
+    this.color = color;
+  }
+}
+
+class ColorMoodTriangle extends ColorTriangle {
+  constructor(a, b, color, mood) {
+    super(a, b, color);
+    this.mood = mood;
+  }
+}
